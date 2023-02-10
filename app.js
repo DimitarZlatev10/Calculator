@@ -41,21 +41,27 @@ calculator.addEventListener("click", (e) => {
       signResult.textContent = target;
     }
   } else if (target === "=") {
-    if (signResult.textContent === "÷") {
-      currentResult.textContent =
-        Number(previousResult.textContent) / Number(currentResult.textContent);
-    } else if (signResult.textContent === "-") {
-      currentResult.textContent =
-        Number(previousResult.textContent) - Number(currentResult.textContent);
-    } else if (signResult.textContent === "+") {
-      currentResult.textContent =
-        Number(previousResult.textContent) + Number(currentResult.textContent);
-    } else if (signResult.textContent === "*") {
-      currentResult.textContent =
-        Number(previousResult.textContent) * Number(currentResult.textContent);
+    if (currentResult.textContent !== "") {
+      if (signResult.textContent === "÷") {
+        currentResult.textContent =
+          Number(previousResult.textContent) /
+          Number(currentResult.textContent);
+      } else if (signResult.textContent === "-") {
+        currentResult.textContent =
+          Number(previousResult.textContent) -
+          Number(currentResult.textContent);
+      } else if (signResult.textContent === "+") {
+        currentResult.textContent =
+          Number(previousResult.textContent) +
+          Number(currentResult.textContent);
+      } else if (signResult.textContent === "*") {
+        currentResult.textContent =
+          Number(previousResult.textContent) *
+          Number(currentResult.textContent);
+      }
+      previousResult.textContent = "";
+      signResult.textContent = "";
     }
-    previousResult.textContent = "";
-    signResult.textContent = "";
   } else if (target === ".") {
     if (
       !currentResult.textContent.includes(".") &&
