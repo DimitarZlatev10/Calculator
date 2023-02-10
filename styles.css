@@ -13,25 +13,26 @@ body {
 
 .calculatorHeader {
   position: relative;
-  width: 100%;
-  height: 100px;
+  height: 150px;
   background-color: black;
 }
 
 .sign {
   position: absolute;
-  left: 10px;
-  top: 15px;
+  right: 10px;
+  top: 16px;
   font-size: 20px;
   color: rgb(166, 165, 165);
 }
 
 .previous {
   position: absolute;
-  right: 10px;
+  right: 30px;
   top: 20px;
   font-size: 15px;
   color: rgb(166, 165, 165);
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .current {
@@ -40,6 +41,8 @@ body {
   bottom: 10px;
   font-size: 30px;
   color: white;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .buttons-row {
@@ -85,6 +88,22 @@ span:hover {
   color: black;
 }
 
+.divide,
+.plus {
+  font-weight: bold;
+}
+
+.subtract {
+  font-size: 30px;
+}
+
+.divide:hover,
+.subtract:hover,
+.plus:hover,
+.multiply:hover {
+  background-color: rgb(219, 215, 215);
+}
+
 .ac {
   font-size: 25px;
 }
@@ -98,12 +117,4 @@ span:hover {
 .equals:hover {
   /* background-color: #f87036; */
   background-color: rgb(0, 179, 255);
-
-}
-
-.divide:hover,
-.subtract:hover,
-.plus:hover,
-.multiply:hover {
-  background-color: rgb(219, 215, 215);
 }
